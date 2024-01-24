@@ -131,7 +131,7 @@ Empty slave2 node
 
 ## It's working!!
 
-To see if our cluster is working we can run to other `.sh` files.
+To see if our cluster is working we can run two other `.sh` files.
 
 ```bash
 bash create_test_table.sh

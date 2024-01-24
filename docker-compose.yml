@@ -28,6 +28,8 @@ services:
       - ./slave1/config/bin-log.cnf:/etc/mysql/mariadb.conf.d/bin-log.cnf
       - ./slave1/data:/var/lib/mysql
     restart: "always"
+    depends_on:
+      - mariadb-master
     networks:
       - hsa1021
   
@@ -43,6 +45,8 @@ services:
       - ./slave2/config/bin-log.cnf:/etc/mysql/mariadb.conf.d/bin-log.cnf
       - ./slave2/data:/var/lib/mysql
     restart: "no"
+    depends_on:
+      - mariadb-master
     networks:
       - hsa1021
 

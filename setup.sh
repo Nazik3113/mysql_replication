@@ -1,8 +1,11 @@
 #!/bin/bash
 
 docker-compose down -v
+mkdir -p ./master/data 
 rm -rf ./master/data/*
+mkdir -p ./slave1/data 
 rm -rf ./slave1/data/*
+mkdir -p ./slave2/data
 rm -rf ./slave2/data/*
 docker-compose build
 docker-compose up -d
