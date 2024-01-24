@@ -157,8 +157,8 @@ Shutting down slave2 node, removing last column from the slave1 table and genera
 ```bash
 docker stop hsa1021-mariadb-slave2
 
-docker exec hsa1021-mariadb-slave1 bash -c "export MYSQL_PWD=mysqlslave1pass; mariadb -u root -e 'ALTER TABLE `hsa1021`.`test` 
-DROP COLUMN `testcol4`;'"
+docker exec hsa1021-mariadb-slave1 bash -c "export MYSQL_PWD=mysqlslave1pass; mariadb -u root -e 'ALTER TABLE hsa1021.test 
+DROP COLUMN testcol4;'"
 
 bash generate_test_data.sh
 ```
@@ -190,7 +190,7 @@ Shutting down slave2 node, removing last and second column from the slave1 table
 ```bash
 docker stop hsa1021-mariadb-slave2
 
-docker exec hsa1021-mariadb-slave1 bash -c "export MYSQL_PWD=mysqlslave1pass; mariadb -u root -e 'ALTER TABLE `hsa1021`.`test` DROP COLUMN `testcol4`, DROP COLUMN `testcol1`;'"
+docker exec hsa1021-mariadb-slave1 bash -c "export MYSQL_PWD=mysqlslave1pass; mariadb -u root -e 'ALTER TABLE hsa1021.test DROP COLUMN testcol4, DROP COLUMN testcol1;'"
 
 bash generate_test_data.sh
 ```
